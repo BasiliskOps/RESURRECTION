@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+<main class="max-w-3xl mx-auto px-4 py-16">
+  <h1 class="text-4xl font-semibold tracking-tight">{{ product_name }}</h1>
+  <section class="mt-8" hx-get="/api/v1/questions/current" hx-trigger="load" hx-swap="innerHTML">
+    Loading the current question.
+  </section>
+  <section class="mt-8" hx-get="/api/v1/findings" hx-trigger="load" hx-swap="innerHTML"></section>
+</main>
+{% endblock %}
